@@ -8,11 +8,11 @@ import { connectDB } from './db/db.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-dotenv.config()
+dotenv.config();
 
-connectDB()
+connectDB();
 
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 6000;
 
 const server = express();
 
