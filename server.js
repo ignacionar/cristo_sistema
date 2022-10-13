@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { connectDB } from './db/db.js';
+import { createTest } from './controllers/test.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -31,6 +32,8 @@ if (process.env.NODE_ENV === "production") {
   })    
 }
 
+server.post('/', createTest);
+
 server.listen(PORT, () => {
-    console.log(`Server is running in http://localhost:${PORT}`);
+  console.log(`Server is running in http://localhost:${PORT}`);
 })
