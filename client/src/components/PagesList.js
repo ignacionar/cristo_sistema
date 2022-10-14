@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const PagesList = styled.ul`
+  text-align: center;
   width: 100%;
   color: white;
   position: relative;
